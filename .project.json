@@ -1,0 +1,55 @@
+{
+  "fullNodeVersion": "v2.8.4",
+  "compilerOptionsUsed": {
+    "ignoreUnusedConstantsWarnings": false,
+    "ignoreUnusedVariablesWarnings": false,
+    "ignoreUnusedFieldsWarnings": false,
+    "ignoreUnusedPrivateFunctionsWarnings": false,
+    "ignoreUpdateFieldsCheckWarnings": false,
+    "ignoreCheckExternalCallerWarnings": false
+  },
+  "infos": {
+    "Deposit": {
+      "sourceFile": "scripts.ral",
+      "sourceCodeHash": "aed2bee52463031072393bbd32714b20810060ed2477c3b1cdfa1ac5c48bc404",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "ICO": {
+      "sourceFile": "ico.ral",
+      "sourceCodeHash": "986b15fda9d2afaeeb6479200beee7df232bdbbdf96fd5d386df57c29010f613",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "6eed2e9e0497e9c21d650f438d7f1ce32e955a90baf6c0817bee40c6f8980d53",
+      "warnings": []
+    },
+    "Owned": {
+      "sourceFile": "owned.ral",
+      "sourceCodeHash": "0ef251900385d40b43257da3a54ff0acbf5e77c0a605dc63036d659fe5052cbb",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "Swap": {
+      "sourceFile": "scripts.ral",
+      "sourceCodeHash": "aed2bee52463031072393bbd32714b20810060ed2477c3b1cdfa1ac5c48bc404",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "WithdrawALPH": {
+      "sourceFile": "scripts.ral",
+      "sourceCodeHash": "aed2bee52463031072393bbd32714b20810060ed2477c3b1cdfa1ac5c48bc404",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "WithdrawToken": {
+      "sourceFile": "scripts.ral",
+      "sourceCodeHash": "aed2bee52463031072393bbd32714b20810060ed2477c3b1cdfa1ac5c48bc404",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    }
+  }
+}

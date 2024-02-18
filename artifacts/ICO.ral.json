@@ -1,0 +1,186 @@
+{
+  "version": "v2.8.4",
+  "name": "ICO",
+  "bytecode": "05081640284031403e4051406c408940b500000101000ab4b24513405a7b1600a0034513405a7b010001010007b4a0034513405a7b1600a103010000000102a00002010001010004b400001600a100010101010008a00116002aa101b4ce001600ac01020101000eb40000a0021600340c7ba00216002ba102b41600a801020101000fb40000a0011600340c7ba00116002ba101b4ce001600ab010102020018a0011600340c7ba00116002ba101a0021600a0002c2aa102b4a00016002ca91601ce001600ab",
+  "codeHash": "6eed2e9e0497e9c21d650f438d7f1ce32e955a90baf6c0817bee40c6f8980d53",
+  "fieldsSig": {
+    "names": [
+      "tokenId",
+      "rate",
+      "tokenBalance",
+      "alphBalance",
+      "selfOwner"
+    ],
+    "types": [
+      "ByteVec",
+      "U256",
+      "U256",
+      "U256",
+      "Address"
+    ],
+    "isMutable": [
+      false,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "eventsSig": [],
+  "functions": [
+    {
+      "name": "assertOwner",
+      "usePreapprovedAssets": false,
+      "useAssetsInContract": false,
+      "isPublic": false,
+      "paramNames": [
+        "caller"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "setOwner",
+      "usePreapprovedAssets": false,
+      "useAssetsInContract": false,
+      "isPublic": true,
+      "paramNames": [
+        "newOwner"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "getRate",
+      "usePreapprovedAssets": false,
+      "useAssetsInContract": false,
+      "isPublic": true,
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "setRate",
+      "usePreapprovedAssets": false,
+      "useAssetsInContract": false,
+      "isPublic": true,
+      "paramNames": [
+        "newRate"
+      ],
+      "paramTypes": [
+        "U256"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "deposit",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": true,
+      "isPublic": true,
+      "paramNames": [
+        "amountIcoTokens"
+      ],
+      "paramTypes": [
+        "U256"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "withdrawALPH",
+      "usePreapprovedAssets": false,
+      "useAssetsInContract": true,
+      "isPublic": true,
+      "paramNames": [
+        "amount"
+      ],
+      "paramTypes": [
+        "U256"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "withdrawToken",
+      "usePreapprovedAssets": false,
+      "useAssetsInContract": true,
+      "isPublic": true,
+      "paramNames": [
+        "amount"
+      ],
+      "paramTypes": [
+        "U256"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "swap",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": true,
+      "isPublic": true,
+      "paramNames": [
+        "amountIcoTokens",
+        "recipient"
+      ],
+      "paramTypes": [
+        "U256",
+        "Address"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    }
+  ],
+  "constants": [],
+  "enums": [
+    {
+      "name": "ErrorCodes",
+      "fields": [
+        {
+          "name": "BalanceExceeded",
+          "value": {
+            "type": "U256",
+            "value": "0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "OwnedError",
+      "fields": [
+        {
+          "name": "Forbidden",
+          "value": {
+            "type": "U256",
+            "value": "90"
+          }
+        }
+      ]
+    }
+  ]
+}

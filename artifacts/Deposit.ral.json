@@ -1,0 +1,34 @@
+{
+  "version": "v2.8.4",
+  "name": "Deposit",
+  "bytecodeTemplate": "01010300000009b4{1}{2}a3{2}0d0c{0}0104",
+  "fieldsSig": {
+    "names": [
+      "ico",
+      "tokenId",
+      "amountIcoTokens"
+    ],
+    "types": [
+      "ByteVec",
+      "ByteVec",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "functions": [
+    {
+      "name": "main",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": false,
+      "isPublic": true,
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    }
+  ]
+}

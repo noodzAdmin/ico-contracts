@@ -1,0 +1,15 @@
+TxScript Swap(ico: ICO, amountIcoTokens: U256) {
+    ico.swap{callerAddress!() -> ALPH: (amountIcoTokens * ico.getRate())}(amountIcoTokens, callerAddress!())
+}
+
+TxScript Deposit(ico: ICO, tokenId: ByteVec, amountIcoTokens: U256) {
+    ico.deposit{callerAddress!() -> tokenId: amountIcoTokens}(amountIcoTokens)
+}
+
+TxScript WithdrawALPH(ico: ICO, amount: U256) {
+    ico.withdrawALPH(amount)
+}
+
+TxScript WithdrawToken(ico: ICO, amount: U256) {
+    ico.withdrawToken(amount)
+}

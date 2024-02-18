@@ -1,0 +1,31 @@
+{
+  "version": "v2.8.4",
+  "name": "Swap",
+  "bytecodeTemplate": "0101030000000eb4{1}0c0d{0}01022ca2{1}b40e0c{0}0107",
+  "fieldsSig": {
+    "names": [
+      "ico",
+      "amountIcoTokens"
+    ],
+    "types": [
+      "ByteVec",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false
+    ]
+  },
+  "functions": [
+    {
+      "name": "main",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": false,
+      "isPublic": true,
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    }
+  ]
+}

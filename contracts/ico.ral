@@ -1,0 +1,53 @@
+Contract ICO(
+    tokenId: ByteVec,
+    mut rate: U256,
+    mut tokenBalance: U256,
+    mut alphBalance: U256,
+    mut selfOwner: Address
+) extends Owned(selfOwner) {
+
+    enum ErrorCodes {
+        BalanceExceeded = 0
+    }
+
+    pub fn getRate() -> U256 {
+        return rate
+    }
+
+    @using(updateFields = true, checkExternalCaller = false)
+    pub fn setRate(newRate: U256) -> () {
+        assertOwner(callerAddress!())
+        rate = newRate
+    }
+
+    @using(preapprovedAssets = true, assetsInContract = true, updateFields = true, checkExternalCaller = false)
+    pub fn deposit(amountIcoTokens: U256) -> () {
+        tokenBalance = tokenBalance + amountIcoTokens
+        transferTokenToSelf!(callerAddress!(), tokenId, amountIcoTokens)
+    }
+
+    @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
+    pub fn withdrawALPH(amount: U256) -> () {
+        assertOwner(callerAddress!())
+        assert!(alphBalance >= amount, ErrorCodes.BalanceExceeded)
+        alphBalance = alphBalance - amount
+        transferTokenFromSelf!(callerAddress!(), ALPH, amount)
+    }
+
+    @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
+    pub fn withdrawToken(amount: U256) -> () {
+        assertOwner(callerAddress!())
+        assert!(tokenBalance >= amount, ErrorCodes.BalanceExceeded)
+        tokenBalance = tokenBalance - amount
+        transferTokenFromSelf!(callerAddress!(), tokenId, amount)
+    }
+
+    @using(preapprovedAssets = true, assetsInContract = true, updateFields = true, checkExternalCaller = false)
+    pub fn swap(amountIcoTokens: U256, recipient: Address) -> () {
+        assert!(tokenBalance >= amountIcoTokens, ErrorCodes.BalanceExceeded)
+        tokenBalance = tokenBalance - amountIcoTokens
+        alphBalance = alphBalance + amountIcoTokens * rate
+        transferTokenToSelf!(callerAddress!(), ALPH, rate * amountIcoTokens)
+        transferTokenFromSelf!(recipient, tokenId, amountIcoTokens)
+    }
+}
